@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xff0155FE),
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
             )),
@@ -98,12 +98,14 @@ class _MainScreenState extends State<MainScreen> {
             if (meetId.isEmpty)
               TextFormField(
                   controller: _meetIdController,
+                  style: TextStyle(color: Colors.grey.shade700),
                   cursorColor: const Color(0xff424242),
                   decoration: InputDecoration(
                     enabledBorder: _commonBorder,
                     focusedBorder: _commonBorder,
                     border: _commonBorder,
                     filled: true,
+                    hintStyle: TextStyle(color: Colors.grey.shade700),
                     hintText: 'Meeting Id',
                     fillColor: const Color(0xFFF3F2F2),
                     contentPadding: const EdgeInsets.symmetric(
@@ -114,6 +116,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
             TextFormField(
                 controller: _userNameController,
+                style: TextStyle(color: Colors.grey.shade700),
                 cursorColor: const Color(0xff424242),
                 decoration: InputDecoration(
                   enabledBorder: _commonBorder,
@@ -121,6 +124,7 @@ class _MainScreenState extends State<MainScreen> {
                   border: _commonBorder,
                   filled: true,
                   hintText: 'User Name',
+                  hintStyle: TextStyle(color: Colors.grey.shade700),
                   fillColor: const Color(0xFFF3F2F2),
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 17, horizontal: 15),
@@ -165,7 +169,10 @@ class _MainScreenState extends State<MainScreen> {
     return const Center(
       child: Text(
         'Enter Meeting Id',
-        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+        style: TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w400,
+        ),
       ),
     );
   }

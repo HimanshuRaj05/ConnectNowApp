@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_meet/data_management.dart';
+import 'package:video_meet/splash_screen.dart';
 
 import 'main_screen.dart';
 
@@ -15,12 +16,13 @@ class EntryRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.dark),
       title: 'ZegoCloud Testing',
       builder: (context, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
         child: child!,
       ),
-      home: const MainScreen(),
+      home: SplashScreen(),
     );
   }
 }
